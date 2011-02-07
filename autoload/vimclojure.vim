@@ -146,6 +146,17 @@ function! vimclojure#AddCompletions(ns)
 	endif
 endfunction
 
+function! vimclojure#FoldTopLevel()
+  let pos = searchpairpos('(', '', ')', 'bWnr')
+
+	if pos == [0, 0]
+		throw "Error: Not in toplevel expression!"
+	endif
+
+  call cursor(pos[0], pos[1])
+  call feedkeys("v%zf")
+endfunction
+
 " Nailgun part:
 function! vimclojure#ExtractSexpr(toplevel)
 	let closure = { "flag" : (a:toplevel ? "r" : "") }

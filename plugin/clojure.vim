@@ -16,6 +16,8 @@ command! -nargs=0 ClojureRepl call vimclojure#StartRepl()
 
 call vimclojure#MakeProtectedPlug("n", "AddToLispWords", "vimclojure#AddToLispWords", "expand(\"<cword>\")")
 
+call vimclojure#MakeProtectedPlug("n", "FoldTopLevel", "vimclojure#FoldTopLevel", "")
+
 call vimclojure#MakeProtectedPlug("n", "DocLookupWord", "vimclojure#DocLookup", "expand(\"<cword>\")")
 call vimclojure#MakeProtectedPlug("n", "DocLookupInteractive", "vimclojure#DocLookup", "input(\"Symbol to look up: \")")
 call vimclojure#MakeProtectedPlug("n", "JavadocLookupWord", "vimclojure#JavadocLookup", "expand(\"<cword>\")")

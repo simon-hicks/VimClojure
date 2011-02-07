@@ -97,6 +97,8 @@ endtry
 
 call vimclojure#MapPlug("n", "aw", "AddToLispWords")
 
+call vimclojure#MapCommandPlug("n", "ft", "FoldTopLevel")
+
 call vimclojure#MapCommandPlug("n", "lw", "DocLookupWord")
 call vimclojure#MapCommandPlug("n", "li", "DocLookupInteractive")
 call vimclojure#MapCommandPlug("n", "jw", "JavadocLookupWord")
